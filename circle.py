@@ -32,7 +32,16 @@ def minus():
 
 def multiple():
     print("Selected Multiplication")
-    return 0
+    total = 1
+    print("Enter m value")
+    m = int(input())
+    print("Enter n value")
+    n = int(input())
+    i = 0
+    while i < n:
+        total = total * (m-i)
+        i += 1
+    print(total)
 
 
 def divide():
@@ -44,4 +53,5 @@ def error():
 # --------------
 print("Please enter selection")
 print("Enter '1' for Circle Adding")
+print("Enter '3' for Circle Multiplication")
 sel(int(input()))
