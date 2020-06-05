@@ -13,7 +13,16 @@ def sel(var):
 
 def add():
     print("Selected Addition")
-    return 0
+    total = 0
+    print("Enter m value")
+    m = int(input())
+    print("Enter n value")
+    n = int(input())
+    i = 0
+    while i < n:
+        total = total + (m-i)
+        i += 1
+    print(total)
 
 
 def minus():
