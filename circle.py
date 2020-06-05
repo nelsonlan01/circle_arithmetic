@@ -27,7 +27,19 @@ def add():
 
 def minus():
     print("Selected Subtraction")
-    return 0
+    total = 0
+    print("Enter m value")
+    m = int(input())
+    print("Enter n value")
+    n = int(input())
+    i = 0
+    while i < n:
+        if i == 0:
+            total = m
+        elif i != 0:
+            total = total - (m-i)
+        i += 1
+    print(total)
 
 
 def multiple():
@@ -53,5 +65,6 @@ def error():
 # --------------
 print("Please enter selection")
 print("Enter '1' for Circle Adding")
+print("Enter '2' for Circle Subtraction")
 print("Enter '3' for Circle Multiplication")
 sel(int(input()))
