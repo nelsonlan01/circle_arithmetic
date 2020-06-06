@@ -57,8 +57,22 @@ def multiple():
 
 
 def divide():
-    print("Selected Division")
-    return 0
+    print('Selected Division')
+    total = 0.0
+    print("Enter m value")
+    m = int(input())
+    print("Enter n value")
+    n = int(input())
+    i = 0
+    while i < n:
+        if n > m:
+            break
+        elif i == 0:
+            total = m
+        elif i != 0:
+            total = total / (m-i)
+        i += 1
+    print(total)
 
 def error():
     print("Error #1 -- Invalid input, please rerun program.")
@@ -67,4 +81,5 @@ print("Please enter selection")
 print("Enter '1' for Circle Adding")
 print("Enter '2' for Circle Subtraction")
 print("Enter '3' for Circle Multiplication")
+print("Enter '4' for Circle Division")
 sel(int(input()))
