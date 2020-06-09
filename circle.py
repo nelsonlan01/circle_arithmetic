@@ -10,7 +10,6 @@ def sel(var):
     elif var<=0 or var>=5:
         error()
 
-
 def add():
     print("Selected Addition")
     total = 0
@@ -23,7 +22,6 @@ def add():
         total = total + (m-i)
         i += 1
     print(total)
-
 
 def minus():
     print("Selected Subtraction")
@@ -41,7 +39,6 @@ def minus():
         i += 1
     print(total)
 
-
 def multiple():
     print("Selected Multiplication")
     total = 1
@@ -50,15 +47,19 @@ def multiple():
     print("Enter n value")
     n = int(input())
     i = 0
-    while i < n:
-        total = total * (m-i)
-        i += 1
-    print(total)
-
+    if n <= m:
+        while i < n:
+            total = total * (m-i)
+            i += 1
+        print(total)
+    elif n > m:
+        print(0)
+        print("Success #1 -- Return with value 0")
 
 def divide():
     print('Selected Division')
     total = 0.0
+    d_zero = False
     print("Enter m value")
     m = int(input())
     print("Enter n value")
@@ -66,13 +67,16 @@ def divide():
     i = 0
     while i < n:
         if n > m:
+            print("Error #2 -- Undefined divide by 0")
+            d_zero = True
             break
         elif i == 0:
             total = m
         elif i != 0:
             total = total / (m-i)
         i += 1
-    print(total)
+    if d_zero == False:
+        print(total)
 
 def error():
     print("Error #1 -- Invalid input, please rerun program.")
