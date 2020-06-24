@@ -1,3 +1,4 @@
+import random
 def sel(var):
     if var == 1:
         add()
@@ -145,7 +146,7 @@ def default():
 print(30 * "-", "MENU", 30 * "-")
 print("Please enter mode")
 print("1 : For menu selection")
-print("2 : For API testing")
+print("2 : For API random number testing")
 mode = int(input())
 print(30 * "-", "MENU", 30 * "-")
 
@@ -162,8 +163,44 @@ if mode == 1:
     # -------MANUAL-------
 elif mode == 2:
     # -------API-------
-    print(add_api(3, 3))  # 6
-    print(minus_api(3, 2))  # 1
-    print(multiple_api(4, 3))  # 24
-    print(divide_api(3, 2))  # 1.5
+    # print(add_api(3, 3))  # 6
+    # print(minus_api(3, 2))  # 1
+    # print(multiple_api(4, 3))  # 24
+    # print(divide_api(3, 2))  # 1.5
+
+    add_x = random.randint(1, 25)
+    add_y = random.randint(0, 25)
+    print("      ")
+    print(15*"=", "Addition Random", 15*"=")
+    print("x=", add_x , ";  y=", add_y)
+    print("ANS ==> ", add_api(add_x, add_y))
+    print(15*"=", "Addition Random", 15*"=")
+    print("      ")
+
+    sub_x = random.randint(1, 25)
+    sub_y = random.randint(0, 25)
+    print("      ")
+    print(15*"=", "Subtraction Random", 15*"=")
+    print("x=", sub_x , ";  y=", sub_y)
+    print("ANS ==> ", minus_api(sub_x, sub_y))
+    print(15*"=", "Subtraction Random", 15*"=")
+    print("      ")
+
+    mul_x = random.randint(1, 15)
+    mul_y = random.randint(0, 15)
+    print("      ")
+    print(15*"=", "Multiplication Random", 15*"=")
+    print("x=", mul_x , ";  y=", mul_y)
+    print("ANS ==> ", multiple_api(mul_x, mul_y))
+    print(15*"=", "Multiplication Random", 15*"=")
+    print("      ")
+
+    div_x = random.randint(1, 15)
+    div_y = random.randint(0, 15)
+    print("      ")
+    print(15*"=", "Division Random", 15*"=")
+    print("x=", div_x , ";  y=", div_y)
+    print("ANS ==> ", divide_api(div_x, div_y))
+    print(15*"=", "Division Random", 15*"=")
+    print("      ")
     # -------API-------
